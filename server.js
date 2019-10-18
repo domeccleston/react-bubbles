@@ -135,7 +135,7 @@ app.put("/api/colors/:id", authenticator, (req, res) => {
     res.status(400).send("Your request is missing the color id");
   if (req.body.id === undefined || !req.body.color || !req.body.code) {
     res
-      .status(422)
+      .status(422)  
       .send("Make sure your request body has all the fields it needs");
   }
   colors = colors.map(color => {
